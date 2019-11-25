@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  file_uploader:
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile
+    image: file_uploader:latest
+    env_file:
+      - ../.env
+    ports:
+      - 8080:8080
